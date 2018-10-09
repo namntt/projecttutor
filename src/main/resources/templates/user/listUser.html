@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <th:thead>
+        <tr>
+            <td>Full name</td>
+            <td>Email</td>
+            <td>Create date</td>
+            <td>Update date</td>
+        </tr>
+    </th:thead>
+    <th:block th:each="user : ${users}">
+        <tr>
+            <td th:text="${user.fullName}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.createDate}"></td>
+            <td th:text="${user.updateDate}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
